@@ -179,6 +179,7 @@ class Server extends Socket
      */
     public function log($message, $type = 'info')
     {
+        if(is_array($message))var_dump($message);
         echo date('Y-m-d H:i:s') . ' [' . ($type ? $type : 'error') . '] ' . $message . PHP_EOL;
     }
 
